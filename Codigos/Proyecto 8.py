@@ -9,29 +9,25 @@ print(datos)
 
 print('\n------------------------------------------------------------------------------------')
 
-#Calcular la cantidad de alarmas generadas para cada nivel de de severidad.
-severidad_counts = datos['SEVERITY'].value_counts() #La funciona .vale_counts() va a leer la columna SEVERITY y la guardara en la variable severidad_count los juntara por severidad.
-print(f'\nContador de severidad por nivel: {severidad_counts}') #Printeara todos los datos almacenados en severidad_counts segun la severidad 1,2,3,4.
+severidad_counts = datos['SEVERITY'].value_counts()
+print(f'\nContador de severidad por nivel: {severidad_counts}')
 
 print('\n------------------------------------------------------------------------------------')
 
-#Identificar la severidad mas frecuente.
-severidad_mas_frecuente = severidad_counts.idxmax() #La funcion .mode() buscara la severidad q tiene mas frecuencia en este caso seria la numero 2.
-print(f'\nSeveridad mas frecuente: {severidad_mas_frecuente}') #Printeara el caso de severidad mas frecuente.
+severidad_mas_frecuente = severidad_counts.idxmax() 
+print(f'\nSeveridad mas frecuente: {severidad_mas_frecuente}')
 
 print('\n------------------------------------------------------------------------------------')
 
-#Promedio y desviacion estandar de la severidad de alarmas
-promedio_severidad = datos['SEVERITY'].mean()#Lo q hace la funcion .mean() es buscar el promedio de todos los datos dados por la columna severidad.
-desviacion_estandar_severidad = datos['SEVERITY'].std()  #La funcion .std() calculara la desviacion estandar de todos los datos dados por la columna severidad.
-print(f'\nPromedio: {promedio_severidad}')  #Printeara el promedio de la columna severidad.
-print(f'\nDesviacion estandar: {desviacion_estandar_severidad}') #Printeara la desviacion estandar de la columna severidad.
+promedio_severidad = datos['SEVERITY'].mean()
+desviacion_estandar_severidad = datos['SEVERITY'].std()  
+print(f'\nPromedio: {promedio_severidad}')  
+print(f'\nDesviacion estandar: {desviacion_estandar_severidad}')
 
 print('\n------------------------------------------------------------------------------------')
 
-#Obtener el Top 5 de los elementos que mas alarmas tienen segun severidad
-top_5_elementos = datos['NAME'].value_counts().head(5) #creamos una variable la cual le asignamos el nombre de top_5_elementos y a la cual le asignaremos el analisis de los primeros 5 datos de la columna NAME.
-print(f'Top 5 elementos: {top_5_elementos}') #Printearemos los primeros 5 elementos de la columna NAME.
+top_5_elementos = datos['NAME'].value_counts().head(5) 
+print(f'Top 5 elementos: {top_5_elementos}')
 
 print('\n------------------------------------------------------------------------------------')
 
