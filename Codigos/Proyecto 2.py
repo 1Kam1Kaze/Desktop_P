@@ -1,19 +1,24 @@
 print('\n------------------------------------------------------------------------------------\n')
 
+#Librerias utilizadas 
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
+
+#Lectura del archivo 
 d1 = pd.read_csv('Home/Archivos/AlarmasSistema.csv', sep=';')
 datos = pd.DataFrame(d1)
 print(datos)
 
 print('\n------------------------------------------------------------------------------------')
 
+#Calcular la cantidad de alarmas generadas por cada nivel de severidad 
 severidad_counts = datos['SEVERITY'].value_counts()
 print(f'\nContador de severidad por nivel: {severidad_counts}')
 
 print('\n------------------------------------------------------------------------------------')
 
+#Identificar severidad mas frecuente
 severidad_mas_frecuente = severidad_counts.idxmax()
 print(f'\nSeveridad mas frecuente: {severidad_mas_frecuente}')
 
