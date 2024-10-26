@@ -1,12 +1,11 @@
 print('\n------------------------------------------------------------------------------------\n')
 
-#Se importan las librerias.
-import pandas as pd #Pandas es para el analisis de datos de este proyecto.
-import matplotlib.pyplot as plt #Matplitlib es para graficar los datos q nos presenten.
-import numpy as np #Numpy es para poder utilizar algunas funciones como el promedio, la media, sumar, restar entre otras....
-d1 = pd.read_csv('Home/Archivos/AlarmasSistema.csv', sep=';') #Leer el archivo con la libreria pandas segun la ruta q se le asigno y lo lee segun el ;.
-datos = pd.DataFrame(d1) #Se convierte la variable d1 en DataFrame
-print(datos)  #Printea la variable datos.
+import pandas as pd 
+import matplotlib.pyplot as plt 
+import numpy as np 
+d1 = pd.read_csv('Home/Archivos/AlarmasSistema.csv', sep=';') 
+datos = pd.DataFrame(d1) 
+print(datos)
 
 print('\n------------------------------------------------------------------------------------')
 
