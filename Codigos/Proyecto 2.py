@@ -7,7 +7,7 @@ import numpy as np
 import streamlit as st
 
 #Lectura del archivo.
-d1 = pd.read_csv('Home/Archivos/AlarmasSistema.csv', sep=';')
+d1 = pd.read_csv('Desktop/Archivos/AlarmasSistema.csv', sep=';')
 datos = pd.DataFrame(d1)
 print(datos)
 st.header('Lectura del archivo')
@@ -174,7 +174,8 @@ plt.title('Distribución de la Severidad de las Alarmas')
 plt.xlabel('Severidad')
 plt.ylabel('Cantidad de Alarmas')
 plt.xticks(rotation=0)
-plt.grid(axis='y') plt.show()
+plt.grid(axis='y') 
+plt.show()
 #Distribucion de la duracion de las alarmas para observar si hay tiempos mas comunes en que las alarmas permaneces activas.
 plt.hist(datos['DURATION'].dropna(), bins=30, color='salmon', edgecolor='black')
 plt.xlabel('Duración (minutos)')
