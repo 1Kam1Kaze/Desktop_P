@@ -4,11 +4,14 @@ print('\n-----------------------------------------------------------------------
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
+import streamlit as st
 
 #Lectura del archivo.
 d1 = pd.read_csv('Home/Archivos/AlarmasSistema.csv', sep=';')
 datos = pd.DataFrame(d1)
 print(datos)
+st.header('Lectura del archivo')
+st.write(datos)
 
 print('\n------------------------------------------------------------------------------------')
 
