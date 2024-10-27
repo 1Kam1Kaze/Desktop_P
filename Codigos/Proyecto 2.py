@@ -1,17 +1,18 @@
 print('\n------------------------------------------------------------------------------------\n')
 
-#Librerias utilizadas. 
 import pandas as pd
-import matplotlib.pyplot as plt
 import numpy as np
+import matplotlib.pyplot as plt
 import streamlit as st
 
-#Lectura del archivo.
-d1 = pd.read_csv('Archivos/AlarmasSistema.csv', sep=';')
+# Carga de datos
+d1 = pd.read_csv('Archivo/AlarmasSistema.csv', sep=';')
 datos = pd.DataFrame(d1)
-print(datos)
-st.header('Lectura del archivo')
+
+# Mostrar datos en Streamlit
+st.header('Lectura de datos')
 st.write(datos)
+
 
 print('\n------------------------------------------------------------------------------------')
 
