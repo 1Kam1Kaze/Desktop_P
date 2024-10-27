@@ -18,8 +18,6 @@ print('\n-----------------------------------------------------------------------
 #Calcular la cantidad de alarmas generadas por cada nivel de severidad.
 severidad_counts = datos['SEVERITY'].value_counts()
 print(f'\nContador de severidad por nivel: {severidad_counts}')
-st.header('Cantidad de alarmas generadas por severidad')
-st.write(severidad_counts)
 
 print('\n------------------------------------------------------------------------------------')
 
