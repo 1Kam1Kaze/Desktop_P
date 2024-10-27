@@ -7,7 +7,7 @@ import numpy as np
 import streamlit as st
 
 #Lectura del archivo.
-d1 = pd.read_csv('Archivos/AlarmasSistema.csv', sep=';')
+d1 = pd.read_csv('/Archivos/AlarmasSistema.csv', sep=';')
 datos = pd.DataFrame(d1)
 print(datos)
 st.header('Lectura del archivo')
