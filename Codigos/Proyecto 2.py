@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import streamlit as st
 
 # Carga de datos
-d1 = pd.read_csv('Archivo/AlarmasSistema.csv', sep=';')
+d1 = pd.read_csv('/home/Cinnamoroll/Documentos/Archivos/Python/Github/Programacion/Archivos/AlarmasSistema.csv', sep=';')
 datos = pd.DataFrame(d1)
 
 # Mostrar datos en Streamlit
