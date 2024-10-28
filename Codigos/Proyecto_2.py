@@ -8,8 +8,7 @@ import streamlit as st
 st.header('Proyecto de programacion analisis de csv')
 
 # Carga de datos
-d1 = pd.read_csv('Archivos/AlarmasSistema.csv', sep=';')
-datos = pd.DataFrame(d1)
+datos = pd.read_csv('Archivos/AlarmasSistema.csv', sep=';')
 print(datos)
 
 # Mostrar datos en Streamlit
