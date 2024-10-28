@@ -40,6 +40,9 @@ promedio_severidad = datos['SEVERITY'].mean()
 desviacion_estandar_severidad = datos['SEVERITY'].std()
 print(f'\nPromedio: {promedio_severidad}')
 print(f'\nDesviacion estandar: {desviacion_estandar_severidad}')
+st.subheader('Promedio y desviacion de la severidad de alarmas')
+st.write(f'Promedio:{promedio_severidad}')
+st.write(f'Desviacion estandar: {desviacion_estandar_severidad}')
 
 print('\n------------------------------------------------------------------------------------')
 
