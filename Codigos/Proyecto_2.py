@@ -8,6 +8,7 @@ import streamlit as st
 # Carga de datos
 d1 = pd.read_csv('/home/Cinnamoroll/Documentos/Archivos/Python/Github/Desktop/Archivos/AlarmasSistema.csv', sep=';')
 datos = pd.DataFrame(d1)
+print(datos)
 
 # Mostrar datos en Streamlit
 st.header('Lectura de datos')
@@ -19,6 +20,8 @@ print('\n-----------------------------------------------------------------------
 #Calcular la cantidad de alarmas generadas por cada nivel de severidad.
 severidad_counts = datos['SEVERITY'].value_counts()
 print(f'\nContador de severidad por nivel: {severidad_counts}')
+st.header('Calcular la cantidad de alarmas generadas por cada nivel de severidad')
+st.write(severidad_counts)
 
 print('\n------------------------------------------------------------------------------------')
 
