@@ -31,7 +31,7 @@ print('\n-----------------------------------------------------------------------
 severidad_mas_frecuente = severidad_counts.idxmax()
 print(f'\nSeveridad mas frecuente: {severidad_mas_frecuente}')
 st.subheader('Identificar severidad mas freciente')
-st.write('severidad_mas_frecuente')
+st.write(f'Severidad mas frecuente: {severidad_mas_frecuente}')
 
 print('\n------------------------------------------------------------------------------------')
 
