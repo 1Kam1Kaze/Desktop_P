@@ -7,9 +7,14 @@ import streamlit as st
 
 st.header('Proyecto de programacion analisis de csv')
 
+<<<<<<< HEAD
 # Carga de 
 d1 = pd.read_csv('Desktop/Archivos/AlarmasSistema.csv', sep=';')
 datos = pd.DataFrame(d1)
+=======
+# Carga de datos
+datos = pd.read_csv('Archivos/AlarmasSistema.csv', sep=';')
+>>>>>>> refs/remotes/origin/master
 print(datos)
 
 # Mostrar datos en Streamlit
@@ -40,12 +45,18 @@ promedio_severidad = datos['SEVERITY'].mean()
 desviacion_estandar_severidad = datos['SEVERITY'].std()
 print(f'\nPromedio: {promedio_severidad}')
 print(f'\nDesviacion estandar: {desviacion_estandar_severidad}')
+st.subheader('Promedio y desviacion de la severidad de alarmas')
+st.write(f'Promedio:{promedio_severidad}')
+st.write(f'Desviacion estandar: {desviacion_estandar_severidad}')
 
 print('\n------------------------------------------------------------------------------------')
 
 #Obtener el Top 5 de los elementos que mas alarmas tienen segun severidad.
 top_5_elementos = datos['NAME'].value_counts().head(5)
 print(f'Top 5 elementos: {top_5_elementos}')
+st.subheader('Obtener el Top 5 elementos de los elementos que mas alarmas tienen segun severidad')
+st.write(top_5_elementos)
+
 
 print('\n------------------------------------------------------------------------------------')
 
