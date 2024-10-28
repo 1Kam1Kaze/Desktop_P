@@ -1,5 +1,7 @@
 print('\n------------------------------------------------------------------------------------\n')
 
+st.header('Proyecto de programacion analisis de csv')
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -11,7 +13,7 @@ datos = pd.DataFrame(d1)
 print(datos)
 
 # Mostrar datos en Streamlit
-st.header('Lectura de datos')
+st.subheader('Lectura de datos')
 st.write(datos)
 
 
@@ -20,7 +22,7 @@ print('\n-----------------------------------------------------------------------
 #Calcular la cantidad de alarmas generadas por cada nivel de severidad.
 severidad_counts = datos['SEVERITY'].value_counts()
 print(f'\nContador de severidad por nivel: {severidad_counts}')
-st.header('Calcular la cantidad de alarmas generadas por cada nivel de severidad')
+st.subheader('Calcular la cantidad de alarmas generadas por cada nivel de severidad')
 st.write(severidad_counts)
 
 print('\n------------------------------------------------------------------------------------')
@@ -28,6 +30,8 @@ print('\n-----------------------------------------------------------------------
 #Identificar severidad mas frecuente.
 severidad_mas_frecuente = severidad_counts.idxmax()
 print(f'\nSeveridad mas frecuente: {severidad_mas_frecuente}')
+st.subheader('Identificar severidad mas freciente')
+st.write('severidad_mas_frecuente')
 
 print('\n------------------------------------------------------------------------------------')
 
