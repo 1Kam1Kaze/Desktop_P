@@ -48,6 +48,9 @@ print('\n-----------------------------------------------------------------------
 #Obtener el Top 5 de los elementos que mas alarmas tienen segun severidad.
 top_5_elementos = datos['NAME'].value_counts().head(5)
 print(f'Top 5 elementos: {top_5_elementos}')
+st.subheader('Obtener el Top 5 elementos de los elementos que mas alarmas tienen segun severidad')
+st.write(top_5_elementos)
+
 
 print('\n------------------------------------------------------------------------------------')
 
