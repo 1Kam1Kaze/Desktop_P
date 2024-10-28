@@ -1,11 +1,11 @@
 print('\n------------------------------------------------------------------------------------\n')
 
-st.header('Proyecto de programacion analisis de csv')
-
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import streamlit as st
+
+st.header('Proyecto de programacion analisis de csv')
 
 # Carga de datos
 d1 = pd.read_csv('/home/Cinnamoroll/Documentos/Archivos/Python/Github/Desktop/Archivos/AlarmasSistema.csv', sep=';')
