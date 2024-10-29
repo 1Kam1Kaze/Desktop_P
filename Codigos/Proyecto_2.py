@@ -58,6 +58,8 @@ print('\n-----------------------------------------------------------------------
 datos['DURATION'] = pd.to_datetime(datos['CANCEL_TIME']) - pd.to_datetime(datos['ALARM_TIME'])
 promedio_duracion = datos['DURATION'].mean()
 print(f'\nPromedio duracion: {promedio_duracion}')
+st.subheader('Calcular la duracion promedio de las alarmas')
+st.write(Promedio_duracion)
 
 print('\n------------------------------------------------------------------------------------')
 
