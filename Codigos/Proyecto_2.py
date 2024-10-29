@@ -59,7 +59,7 @@ datos['DURATION'] = pd.to_datetime(datos['CANCEL_TIME']) - pd.to_datetime(datos[
 promedio_duracion = datos['DURATION'].mean()
 print(f'\nPromedio duracion: {promedio_duracion}')
 st.subheader('Calcular la duracion promedio de las alarmas')
-st.write(Promedio_duracion)
+st.write(promedio_duracion)
 
 print('\n------------------------------------------------------------------------------------')
 
@@ -68,6 +68,9 @@ alarma_mayor = datos.loc[datos['DURATION'].idxmax()]
 alarma_menor = datos.loc[datos['DURATION'].idxmin()]
 print(f'Alarma mayor: {alarma_mayor}\n')
 print(f'Alarma menor: {alarma_menor}')
+st.subheader('Identificar las alarmas con mayor y menor duracion')
+st.write(f'Alarma mayor: {alarma_mayor}')
+st.write(f'Alarma menor: {alarma_menor}')
 
 print('\n------------------------------------------------------------------------------------')
 
