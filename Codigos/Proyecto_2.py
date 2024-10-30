@@ -78,7 +78,7 @@ print('\n-----------------------------------------------------------------------
 promedio = datos.groupby("SEVERITY")["DURATION"].mean()
 print(f'Duracion: {mean}')
 st.header('Relacionar la duracion de alarmas con su serveridad')
-st.write(mean)
+st.write(promedio)
 
 print('\n------------------------------------------------------------------------------------')
 
