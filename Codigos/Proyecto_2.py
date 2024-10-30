@@ -75,7 +75,7 @@ st.write(f'Alarma menor: {alarma_menor}')
 print('\n------------------------------------------------------------------------------------')
 
 #Relacionar la duracion de las alarmas con su severidad.
-mean = datos.groupby("SEVERITY")["DURATION"].mean()
+promedio = datos.groupby("SEVERITY")["DURATION"].mean()
 print(f'Duracion: {mean}')
 st.header('Relacionar la duracion de alarmas con su serveridad')
 st.write(mean)
