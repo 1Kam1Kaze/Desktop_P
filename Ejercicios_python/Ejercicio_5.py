@@ -23,7 +23,7 @@ lista2 = []
 flag = True
 
 print("")
-print("Haz un programa en Python que pida números al usuario que se vayan almacenando en una lista.")
+print("Haz un programa en Python que pida números al usuario que se vayan almacenando en una lista. \nPara poder para escriba 0")
 while flag == True:
     print("")
     numero = int(input("Introduce un número: "))

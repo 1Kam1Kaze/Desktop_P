@@ -12,12 +12,12 @@
 
 def escribir_contenido():
     contenido = ['Hola, este es un ejemplo de archivo de texto.','Estamos aprendiendo a trabajar con archivos en Python.','Espero que encuentres esto util.']
-    with open('Desktop/Archivos/ejemplo.txt','w') as e:
+    with open('Archivos/ejemplo.txt','w') as e:
         for i in range(3):
             e.write(f"{contenido[i]}\n")
-    with open('Desktop/Archivos/ejemplo.txt','r') as r:
+    with open('Archivos/ejemplo.txt','r') as r:
         c = r.readlines()
-    with open('Desktop/Archivos/nuevo_ejemplo.txt','w') as w:
+    with open('Archivos/nuevo_ejemplo.txt','w') as w:
         for i in range(-2,0):
             w.write(f"{c[i]}")
 escribir_contenido()

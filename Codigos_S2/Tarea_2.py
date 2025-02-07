@@ -37,7 +37,7 @@ def registrar_datos():
             nombre = input("\nIngrese su nombre: ")
             edad = input("\nIngrese su edad: ")
             correo = input('\nIngrese su correo: ')
-            with open("Python/Tareas segundo semestre/Archivos/registros.txt", "a") as archivo:
+            with open("Archivos/registros.txt", "a") as archivo:
                 archivo.write(f"\nNombre: {nombre}\nEdad: {edad}\nCorreo: {correo}\n")
         elif q == 'no':
             print('')

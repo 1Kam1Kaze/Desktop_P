@@ -25,7 +25,7 @@ def graficar_datos(archivo):
     plt.legend()
     plt.show()
 
-# graficar_datos('/home/cinnamoroll/Documentos/VSC/Python/Tareas/Archivos/lineas.txt')
+# graficar_datos('/home/Kirby/Escritorio/Desktop/Archivos/lineas.txt')
 
     # Ejercicio 2: Análisis de temperaturas diarias
 
@@ -60,7 +60,7 @@ def analizar_tempraturas(archivo):
         plt.title('Análisis de temperaturas diarias')
         plt.show()
 
-# analizar_tempraturas('/home/cinnamoroll/Documentos/VSC/Python/Tareas/Archivos/temperaturas.txt')
+# analizar_tempraturas('Archivos/temperaturas.txt')
 
 
     # Ejercicio 3: Control de gastos personales
@@ -96,7 +96,7 @@ def analizar_gastos(archivo):
     plt.ylabel('Gasto Total')
     plt.show()
 
-# analizar_gastos('/home/cinnamoroll/Documentos/Archivos/Python/Tareas/Archivos/gastos.txt')
+# analizar_gastos('Archivos/gastos.txt')
 
 
     # Ejercicio 4: Seguimiento del ejercicio físico
@@ -127,10 +127,10 @@ def analizar_ejercicio(archivo):
     plt.title('Horas de ejercicio por dia')
     plt.xlabel('Dia de la semana')
     plt.ylabel('Horas de ejercicio')
-    pl.grid(True)
+    plt.grid(True)
     plt.show()
 
-# analizar_ejercicio('/home/cinnamoroll/Documentos/Archivos/Python/Tareas/Archivos/ejercicio.txt')
+# analizar_ejercicio('Archivos/ejercicio.txt')
 
     # Ejercicio 5: Análisis del consumo eléctrico
 
@@ -165,7 +165,7 @@ def analizar_consumo(archivo):
     plt.grid(True)
     plt.show()
 
-# analizar_consumo('/home/cinnamoroll/Documentos/Archivos/Python/Tareas/Archivos/consumo.txt')
+# analizar_consumo('Archivos/consumo.txt')
 
     # Ejercicio 6: Análisis de horas dedicadas a actividades diarias
 
@@ -192,7 +192,7 @@ def analizar_actividades(archivo):
     plt.title('Distribucion del tiempo dedicado a actividades durante la semana')
     plt.show()
 
-# analizar_actividades('/home/cinnamoroll/Documentos/Archivos/Python/Tareas/Archivos/actividades.txt')
+# analizar_actividades('Archivos/actividades.txt')
 
     # Ejercicio 7: Análisis del rendimiento académico de estudiantes
 
@@ -243,7 +243,7 @@ def analizar_rendimiento(ruta):
     plt.title('Promedio de Calificaciones por Estudiante')
     plt.show()
 
-# analizar_rendimiento('/home/cinnamoroll/Documentos/Archivos/Python/Tareas/Archivos/')
+# analizar_rendimiento('Archivos/')
 
     # Usando los mismos archivos del ejercicio anterior, ahora analizaremos los promedios de cada estudiante separados por asignatura. 
 
@@ -282,9 +282,10 @@ def analizar_rendimiento_asignatura(ruta):
     axs[2].set_ylabel('Promedios')
     plt.show()
 
+# analizar_rendimiento_asignatura('Archivos/')
 
-# analizar_rendimiento_asignatura('/home/cinnamoroll/Documentos/Archivos/Python/Tareas/Archivos/')
                                    
+
     # Ejercicio 8: Análisis de vent1as en diferentes tiendas
 
     # Objetivo: Analizar las ventas de diferentes tiendas en un mes utilizando archivos que contienen datos de ventas por día.
@@ -328,7 +329,7 @@ def analizar_ventas(ruta):
     plt.grid(True)
     plt.show()
 
-# analizar_ventas('/home/cinnamoroll/Documentos/Archivos/Python/Tareas/Archivos/')
+# analizar_ventas('Archivos/')
 
     # Cambiemos el código anterior para que nuestra función sea capaz de leer todos los archivos de una carpeta que empiecen con la palabra tienda y terminen en .txt
 
@@ -338,7 +339,7 @@ def analizar_ventas(ruta):
 
 def analizar_ventas(ruta):
     tiendas = []
-    for i in os.listdir('/home/cinnamoroll/Documentos/Archivos/Python/Tareas/Archivos/'):
+    for i in os.listdir('Archivos/'):
         print(i)
         if i.startswith('tienda') and i.endswith('.txt'):
             tiendas.append(i)
@@ -362,7 +363,7 @@ def analizar_ventas(ruta):
     plt.grid(True)
     plt.show()
 
-# analizar_ventas('/home/cinnamoroll/Documentos/Archivos/Python/Tareas/Archivos/')
+# analizar_ventas('Archivos/')
 
     # Ejercicio 9: Análisis del consumo de agua en hogares
 
@@ -408,4 +409,4 @@ def analizar_ventas(ruta):
     #       - La función debe listar todos los archivos en la carpeta y usar aquellos que comienzan con "empleado" y terminan en ".txt".
     #       - La función debe leer los datos de estos archivos, procesar la información y generar gráficos para cada empleado que muestren las horas dedicadas a cada tipo de tarea.
 
-    #   10.1- Modifiquemos el codigo para que genere cuatro subgráficas, cada una representando las horas dedicadas a una actividad específica (Administrativa, Productiva, Comunicativa y Reuniones) en promedio por cada trabajador.
+#   10.1- Modifiquemos el codigo para que genere cuatro subgráficas, cada una representando las horas dedicadas a una actividad específica (Administrativa, Productiva, Comunicativa y Reuniones) en promedio por cada trabajador.

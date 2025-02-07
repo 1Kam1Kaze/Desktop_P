@@ -11,9 +11,9 @@ flag = True
 while flag == True:
 
     print("")
-    N = int(input("Escriba un número entre el 10 y el 20: "))
+    n = int(input("Escriba un número entre el 10 y el 20: "))
 
-    if N >= 10 and N <= 20:
+    if n >= 10 and n <= 20:
         flag = False
     else: 
         print("")
@@ -22,14 +22,14 @@ while flag == True:
 print("")
 print("Normal ----------------------")
 
-for i in range(1, N+1):
+for i in range(1, n+1):
     print("")
     print(i)
 
 print("")
 print("Inverso --------------------")
 
-for k in range(30,N,-1):
+for k in range(30,n,-1):
     print("")
     print(k)
 
