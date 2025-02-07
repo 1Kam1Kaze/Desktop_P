@@ -382,6 +382,40 @@ def analizar_ventas(ruta):
     #       - Use numpy para calcular el consumo promedio mensual de cada hogar.
     #       - Genere un gráfico de pastel (pie chart) con matplotlib mostrando la proporción del consumo total de cada hogar.
 
+# import os
+# import numpy
+# import matplotlib
+
+def analizar_consumo_agua(ruta):
+    aguas = []
+    for i in os.listdir('Archivos/'):
+        print(i)
+        if i.startswith('hogar') and i.endswith('.txt'):
+            tiendas.append(i)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     # Ejercicio 10: Análisis de Productividad en una Empresa
 
     # Objetivo: Analizar la productividad de los empleados en una empresa utilizando archivos que registran la cantidad de horas dedicadas a diferentes tipos de tareas diariamente.
