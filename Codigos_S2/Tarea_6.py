@@ -382,54 +382,43 @@ def analizar_ventas(ruta):
     #       - Use numpy para calcular el consumo promedio mensual de cada hogar.
     #       - Genere un gráfico de pastel (pie chart) con matplotlib mostrando la proporción del consumo total de cada hogar.
 
-# import os
-# import numpy
-# import matplotlib
+#import os
+#import numpy as np
+#import matplotlib.pyplot as plt
 
 def analizar_consumo_agua(ruta):
-    aguas = [] 
-    for i in os.listdir(ruta):
-        if i.startswith('hogar') and i.endswith('.txt'):
-            aguas.append(i)
+    hogares = {}
     
-    for datos in aguas:
-        consumos = []
-        with open(ruta+datos,'r') as a:
-            for lines in a:
-                # Saltar líneas vacías o con datos no válidos
-                if lines.strip():  # Esto verifica si la línea no está vacía
-                    try:
-                        mes, consumo = lines.split()  # Separar mes y consumo
-                        consumos.append(float(consumo))  # Agregar consumo como float
-                    except ValueError:
-                        print(f"Error al procesar la línea: {lines}")  # Imprime error si no puede dividir la línea
+    # Buscar archivos de consumo de agua
+    for archivo in os.listdir(ruta):
+        if archivo.startswith('hogar') and archivo.endswith('.txt'):
+            consumos = []
+            try:
+                with open(os.path.join(ruta, archivo), 'r') as f:
+                    for linea in f:
+                        if linea.strip():  # Evitar líneas vacías
+                            mes, consumo = linea.split()
+                            consumos.append(float(consumo))  
+                
+                if consumos:
+                    hogares[archivo] = np.mean(consumos)  # Guardar el promedio
 
-            print(consumos)
-                    
-analizar_consumo_agua('Archivos/')
+            except ValueError:
+                print(f"Error al leer el archivo {archivo}. Verifica su formato.")
 
+    if hogares:
+        # Mostrar promedios individuales
+        for hogar, promedio in hogares.items():
+            print(f'El promedio mensual de {hogar} es: {promedio:.2f} m³')
 
+        # Gráfico de pastel con todos los hogares
+        plt.pie(hogares.values(), labels=hogares.keys(), autopct='%1.1f%%', startangle=140)
+        plt.title('Proporción del consumo de agua por hogar')
+        plt.show()
+    else:
+        print("No se encontraron datos de consumo de agua.")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# analizar_consumo_agua('Archivos/')
 
     # Ejercicio 10: Análisis de Productividad en una Empresa
 
@@ -443,6 +432,21 @@ analizar_consumo_agua('Archivos/')
 
     # El formato de cada archivo es el siguiente:
     # Requisitos
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
 
     #   1. Archivos de Datos:
     #       - Se proporcionan archivos de texto para cinco empleados. Cada archivo debe tener el nombre empleadoX.txt, donde X es un número del 1 al 5.
