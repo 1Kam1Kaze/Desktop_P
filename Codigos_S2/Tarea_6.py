@@ -339,7 +339,7 @@ def analizar_ventas(ruta):
 
 def analizar_ventas(ruta):
     tiendas = []
-    for i in os.listdir('Archivos/'):
+    for i in os.listdir(ruta):
         print(i)
         if i.startswith('tienda') and i.endswith('.txt'):
             tiendas.append(i)
@@ -387,11 +387,26 @@ def analizar_ventas(ruta):
 # import matplotlib
 
 def analizar_consumo_agua(ruta):
-    aguas = []
-    for i in os.listdir('Archivos/'):
-        print(i)
+    aguas = [] 
+    for i in os.listdir(ruta):
         if i.startswith('hogar') and i.endswith('.txt'):
-            tiendas.append(i)
+            aguas.append(i)
+    
+    for datos in aguas:
+        consumos = []
+        with open(ruta+datos,'r') as a:
+            for lines in a:
+                # Saltar líneas vacías o con datos no válidos
+                if lines.strip():  # Esto verifica si la línea no está vacía
+                    try:
+                        mes, consumo = lines.split()  # Separar mes y consumo
+                        consumos.append(float(consumo))  # Agregar consumo como float
+                    except ValueError:
+                        print(f"Error al procesar la línea: {lines}")  # Imprime error si no puede dividir la línea
+
+            print(consumos)
+                    
+analizar_consumo_agua('Archivos/')
 
 
 
