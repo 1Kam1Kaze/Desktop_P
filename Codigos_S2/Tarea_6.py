@@ -432,21 +432,6 @@ def analizar_consumo_agua(ruta):
 
     # El formato de cada archivo es el siguiente:
     # Requisitos
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
 
     #   1. Archivos de Datos:
     #       - Se proporcionan archivos de texto para cinco empleados. Cada archivo debe tener el nombre empleadoX.txt, donde X es un número del 1 al 5.
@@ -461,5 +446,20 @@ def analizar_consumo_agua(ruta):
     #       - La función debe recibir la ruta a una carpeta que contenga los archivos de todos los empleados.
     #       - La función debe listar todos los archivos en la carpeta y usar aquellos que comienzan con "empleado" y terminan en ".txt".
     #       - La función debe leer los datos de estos archivos, procesar la información y generar gráficos para cada empleado que muestren las horas dedicadas a cada tipo de tarea.
+
+# import 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #   10.1- Modifiquemos el codigo para que genere cuatro subgráficas, cada una representando las horas dedicadas a una actividad específica (Administrativa, Productiva, Comunicativa y Reuniones) en promedio por cada trabajador.
