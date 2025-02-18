@@ -447,9 +447,19 @@ def analizar_consumo_agua(ruta):
     #       - La función debe listar todos los archivos en la carpeta y usar aquellos que comienzan con "empleado" y terminan en ".txt".
     #       - La función debe leer los datos de estos archivos, procesar la información y generar gráficos para cada empleado que muestren las horas dedicadas a cada tipo de tarea.
 
-# import 
+# import os
+# import matplotlib.pyplot as plt
+#
+def horas_de_trabajo(ruta):
+    empleados = []
+    for archivo in os.listdir(ruta):
+        if archivo.startswith('empleado') and archivo.endswith('.txt'):
+            with open(os.path.join(ruta, archivo), 'r') as es:
+                print(es.read())
 
 
+
+horas_de_trabajo('Archivos/')
 
 
 
