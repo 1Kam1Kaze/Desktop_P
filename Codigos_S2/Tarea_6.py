@@ -449,15 +449,13 @@ def analizar_consumo_agua(ruta):
 
 # import os
 # import matplotlib.pyplot as plt
-#
+
 def horas_de_trabajo(ruta):
     empleados = []
     for archivo in os.listdir(ruta):
         if archivo.startswith('empleado') and archivo.endswith('.txt'):
             with open(os.path.join(ruta, archivo), 'r') as es:
                 print(es.read())
-
-
 
 horas_de_trabajo('Archivos/')
 
