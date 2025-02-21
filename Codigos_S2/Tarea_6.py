@@ -388,7 +388,6 @@ def analizar_ventas(ruta):
 
 def analizar_consumo_agua(ruta):
     hogares = {}
-    
     # Buscar archivos de consumo de agua
     for archivo in os.listdir(ruta):
         if archivo.startswith('hogar') and archivo.endswith('.txt'):
@@ -399,18 +398,14 @@ def analizar_consumo_agua(ruta):
                         if linea.strip():  # Evitar líneas vacías
                             mes, consumo = linea.split()
                             consumos.append(float(consumo))  
-                
                 if consumos:
                     hogares[archivo] = np.mean(consumos)  # Guardar el promedio
-
             except ValueError:
                 print(f"Error al leer el archivo {archivo}. Verifica su formato.")
-
     if hogares:
         # Mostrar promedios individuales
         for hogar, promedio in hogares.items():
             print(f'El promedio mensual de {hogar} es: {promedio:.2f} m³')
-
         # Gráfico de pastel con todos los hogares
         plt.pie(hogares.values(), labels=hogares.keys(), autopct='%1.1f%%', startangle=140)
         plt.title('Proporción del consumo de agua por hogar')
@@ -423,7 +418,7 @@ def analizar_consumo_agua(ruta):
     # Ejercicio 10: Análisis de Productividad en una Empresa
 
     # Objetivo: Analizar la productividad de los empleados en una empresa utilizando archivos que registran la cantidad de horas dedicadas a diferentes tipos de tareas diariamente.
-    
+
     # Descripción del Ejercicio: Cada empleado tiene un archivo de texto asociado que registra las horas dedicadas diariamente a cuatro categorías de tareas:
     #   - Tareas Administrativas
     #   - Tareas Productiva
@@ -450,14 +445,46 @@ def analizar_consumo_agua(ruta):
 # import os
 # import matplotlib.pyplot as plt
 
+import os
+import matplotlib.pyplot as plt
+
 def horas_de_trabajo(ruta):
     empleados = []
+    datos = []
+    tareas = ["Tareas Administrativas", "Tareas Productivas", "Tareas Comunicativas", "Reuniones"]
+    
+    # Leer los archivos de empleados
     for archivo in os.listdir(ruta):
         if archivo.startswith('empleado') and archivo.endswith('.txt'):
+            empleados.append(archivo)
             with open(os.path.join(ruta, archivo), 'r') as es:
-                print(es.read())
+                a = es.read().split()
+                for dato in a:
+                    if dato.isdigit():
+                        datos.append(int(dato))  # Convertir directamente a int
 
+    # Mostrar los datos (puedes ajustarlo según lo que quieras ver)
+    print(datos)
+
+    # Asumiendo que hay 4 valores por empleado (ajustar según el formato de tus datos)
+    horas_por_empleado = [datos[i:i+4] for i in range(0, len(datos), 4)]
+
+    # Para cada tarea (índice de tareas), crear un gráfico con los datos correspondientes de todos los empleados
+    for j, tarea in enumerate(tareas):
+        horas_tarea = []
+        for i in range(len(empleados)):
+            horas_tarea.append(horas_por_empleado[i][j])  # Obtener la hora de cada empleado para la tarea j
+        
+        # Generar el gráfico de pie
+        plt.figure()
+        plt.pie(horas_tarea, labels=empleados, autopct='%1.1f%%')
+        plt.title(f'Distribución de horas en {tarea}')
+        plt.show()
+
+# Llamada de ejemplo
 horas_de_trabajo('Archivos/')
+
+
 
 
 
