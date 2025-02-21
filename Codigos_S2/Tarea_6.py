@@ -445,9 +445,6 @@ def analizar_consumo_agua(ruta):
 # import os
 # import matplotlib.pyplot as plt
 
-import os
-import matplotlib.pyplot as plt
-
 def horas_de_trabajo(ruta):
     empleados = []
     datos = []
@@ -474,27 +471,14 @@ def horas_de_trabajo(ruta):
         horas_tarea = []
         for i in range(len(empleados)):
             horas_tarea.append(horas_por_empleado[i][j])  # Obtener la hora de cada empleado para la tarea j
-        
-        # Generar el gráfico de pie
-        plt.figure()
+
+        # Generar el gráfico de pie 
         plt.pie(horas_tarea, labels=empleados, autopct='%1.1f%%')
         plt.title(f'Distribución de horas en {tarea}')
         plt.show()
 
 # Llamada de ejemplo
 horas_de_trabajo('Archivos/')
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 #   10.1- Modifiquemos el codigo para que genere cuatro subgráficas, cada una representando las horas dedicadas a una actividad específica (Administrativa, Productiva, Comunicativa y Reuniones) en promedio por cada trabajador.
