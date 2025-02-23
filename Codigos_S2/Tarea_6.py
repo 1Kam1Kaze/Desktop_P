@@ -482,3 +482,14 @@ horas_de_trabajo('Archivos/')
 
 
 #   10.1- Modifiquemos el codigo para que genere cuatro subgráficas, cada una representando las horas dedicadas a una actividad específica (Administrativa, Productiva, Comunicativa y Reuniones) en promedio por cada trabajador.
+
+
+
+
+
+
+
+
+
+
+
