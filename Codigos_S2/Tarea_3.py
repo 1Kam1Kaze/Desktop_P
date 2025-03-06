@@ -23,5 +23,5 @@ def GeneradorDeArchivo(ruta_archivo,numero_de_lineas):
         print(f'Primeras 5 lineas {c[:5]}')
         print(f'Lineas desde la 3 a la 7 {c[2:7]}')
 
-GeneradorDeArchivo('Archivos/archivo.txt',10)
+GeneradorDeArchivo('Archivos_S2/archivo.txt',10)
     

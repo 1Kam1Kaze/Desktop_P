@@ -25,7 +25,7 @@ def graficar_datos(archivo):
     plt.legend()
     plt.show()
 
-# graficar_datos('/home/Kirby/Escritorio/Desktop/Archivos/lineas.txt')
+# graficar_datos('Archivos_S2/lineas.txt')
 
     # Ejercicio 2: Análisis de temperaturas diarias
 
@@ -96,7 +96,7 @@ def analizar_gastos(archivo):
     plt.ylabel('Gasto Total')
     plt.show()
 
-# analizar_gastos('Archivos/gastos.txt')
+# analizar_gastos('Archivos_S2/gastos.txt')
 
 
     # Ejercicio 4: Seguimiento del ejercicio físico
@@ -130,7 +130,7 @@ def analizar_ejercicio(archivo):
     plt.grid(True)
     plt.show()
 
-# analizar_ejercicio('Archivos/ejercicio.txt')
+# analizar_ejercicio('Archivos_S2/ejercicio.txt')
 
     # Ejercicio 5: Análisis del consumo eléctrico
 
@@ -165,7 +165,7 @@ def analizar_consumo(archivo):
     plt.grid(True)
     plt.show()
 
-# analizar_consumo('Archivos/consumo.txt')
+# analizar_consumo('Archivos_S2/consumo.txt')
 
     # Ejercicio 6: Análisis de horas dedicadas a actividades diarias
 
@@ -192,7 +192,7 @@ def analizar_actividades(archivo):
     plt.title('Distribucion del tiempo dedicado a actividades durante la semana')
     plt.show()
 
-# analizar_actividades('Archivos/actividades.txt')
+# analizar_actividades('Archivos_S2/actividades.txt')
 
     # Ejercicio 7: Análisis del rendimiento académico de estudiantes
 
@@ -243,7 +243,7 @@ def analizar_rendimiento(ruta):
     plt.title('Promedio de Calificaciones por Estudiante')
     plt.show()
 
-# analizar_rendimiento('Archivos/')
+# analizar_rendimiento('Archivos_S2/')
 
     # Usando los mismos archivos del ejercicio anterior, ahora analizaremos los promedios de cada estudiante separados por asignatura. 
 
@@ -282,7 +282,7 @@ def analizar_rendimiento_asignatura(ruta):
     axs[2].set_ylabel('Promedios')
     plt.show()
 
-# analizar_rendimiento_asignatura('Archivos/')
+# analizar_rendimiento_asignatura('Archivos_S2/')
 
                                    
 
@@ -329,7 +329,7 @@ def analizar_ventas(ruta):
     plt.grid(True)
     plt.show()
 
-# analizar_ventas('Archivos/')
+# analizar_ventas('Archivos_S2/')
 
     # Cambiemos el código anterior para que nuestra función sea capaz de leer todos los archivos de una carpeta que empiecen con la palabra tienda y terminen en .txt
 
@@ -363,7 +363,7 @@ def analizar_ventas(ruta):
     plt.grid(True)
     plt.show()
 
-# analizar_ventas('Archivos/')
+# analizar_ventas('Archivos_S2/')
 
     # Ejercicio 9: Análisis del consumo de agua en hogares
 
@@ -413,7 +413,7 @@ def analizar_consumo_agua(ruta):
     else:
         print("No se encontraron datos de consumo de agua.")
 
-# analizar_consumo_agua('Archivos/')
+# analizar_consumo_agua('Archivos_S2/')
 
     # Ejercicio 10: Análisis de Productividad en una Empresa
 
@@ -478,7 +478,7 @@ def horas_de_trabajo(ruta):
         plt.show()
 
 # Llamada de ejemplo
-horas_de_trabajo('Archivos/')
+horas_de_trabajo('Archivos_S2/')
 
 
 #   10.1- Modifiquemos el codigo para que genere cuatro subgráficas, cada una representando las horas dedicadas a una actividad específica (Administrativa, Productiva, Comunicativa y Reuniones) en promedio por cada trabajador.

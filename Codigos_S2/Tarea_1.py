@@ -15,9 +15,9 @@ def escribir_contenido():
     with open('Archivos/ejemplo.txt','w') as e:
         for i in range(3):
             e.write(f"{contenido[i]}\n")
-    with open('Archivos/ejemplo.txt','r') as r:
+    with open('Archivos_S2/ejemplo.txt','r') as r:
         c = r.readlines()
-    with open('Archivos/nuevo_ejemplo.txt','w') as w:
+    with open('Archivos_S2/nuevo_ejemplo.txt','w') as w:
         for i in range(-2,0):
             w.write(f"{c[i]}")
 escribir_contenido()

@@ -12,9 +12,9 @@ ids = [782,555,749,899,875,654,760,450]
 def sospecho(a,b): 
     sospechoso = []
     try:
-        with open('Archivos/NoSospechoso.txt','x') as created:
+        with open('Archivos_S2/NoSospechoso.txt','x') as created:
             pass
-        with open('Archivos/NoSospechoso.txt','r+') as ns:
+        with open('Archivos_S2/NoSospechoso.txt','r+') as ns:
             no_sospechosos = ns.read().splitlines()
             for i in range(len(a)):
                 if len(a[i]) < 7 and 750 <= b[i] <= 780:
@@ -27,7 +27,7 @@ def sospecho(a,b):
         else:
             return print(f'\n{sospechoso}\n')
     except FileExistsError:
-        with open('Archivos/NoSospechoso.txt','r+') as ns:
+        with open('Archivos_S2/NoSospechoso.txt','r+') as ns:
             no_sospechosos = ns.read().splitlines()
             for i in range(len(a)):
                 if len(a[i]) < 7 and 750 <= b[i] <= 780:
