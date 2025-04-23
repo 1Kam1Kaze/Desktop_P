@@ -1,3 +1,0 @@
--- Keymaps are automatically loaded on the VeryLazy event
--- Default keymaps that are aleysjfijfasldkjfasldkjfasldkjfmaps.lua
--- Add any additional keymaps here
